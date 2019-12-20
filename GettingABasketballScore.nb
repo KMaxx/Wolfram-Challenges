@@ -1,0 +1,375 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+"\<Getting a Basketball Score\>","Title",ExpressionUUID -> "aa8ad4ce-b6ed-47e1-98f0-8993bd5feaa8"],Cell[
+BoxData[
+FrameBox[TagBox[GridBox[{{StyleBox["\"THE CHALLENGE\"",StripOnInput -> False,FontFamily -> "Source Sans Pro",
+FontSize -> 18,FontWeight -> Plain,FontColor -> GrayLevel[1]]}},AutoDelete -> False,
+GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}},GridBoxSpacings -> {"Columns" -> {{0}},"Rows" -> {{0}}}],
+"Grid"],Background -> RGBColor[0.9961,0.3098,0.21569],FrameMargins -> {{13,13},{2,8}},
+FrameStyle -> None,ImageMargins -> {{0,0},{-2,0}},StripOnInput -> False]],"WCIntroDivider",
+CellMargins -> {{66,0},{-2,37}},ExpressionUUID -> "53864bbd-1d31-4bcc-a593-6c3348ef2f2f"],Cell[
+
+"\<\>","WCIntroDividerLine",ExpressionUUID -> "195fd9c9-5d16-4831-8334-cc58d576df54"],Cell[
+TextData[
+{"Write a function that takes an integer ",StyleBox["n",FontSlant -> Italic]," and outputs all the possible ways to represent ",StyleBox[
+"n",FontSlant -> Italic]," as sums of 2s and 3s. "}],"Description",ExpressionUUID -> "4b392a28-2ffb-498b-833b-2a2509bf2cc2"],Cell[
+CellGroupData[
+{Cell[
+"\<More Details\>","Section",ExpressionUUID -> "82362f53-d98f-4bc4-88ea-bc43916e013b"],Cell[
+
+"\<In basketball, ignoring free throws, there are two possible ways you can score: a two-pointer or a three-pointer. Therefore, a team's score can be decomposed into a sum of 2s and 3s, possibly in many ways.\>",
+"Text",ExpressionUUID -> "85266d7f-c930-48b7-8cdc-2e95dedd3291"],Cell[
+"\<For example, you can get 6 points in two ways: 3 + 3 or 2 + 2 + 2.\>",
+"Text",ExpressionUUID -> "af8d24f2-ec8e-49eb-b329-855435901d66"],Cell[
+"\<Consider 2 + 3 to be the same as 3 + 2. All that matters is how many two-pointers and three-pointers were scored, not the order in which they were scored.\>",
+"Text",ExpressionUUID -> "5b169e41-1c22-404b-9977-b9c29eb22309"]},Open],ExpressionUUID -> "dcf7187c-06d6-43d0-b1d7-00fa80eb6f0d"],Cell[
+CellGroupData[
+{Cell[
+"\<What Your Function Should Do\>","Section",ExpressionUUID -> "37d83810-a914-4f27-a7aa-86e54a58e3a6"],Cell[
+TextData[
+{"Write a function called ",StyleBox["TwoAndThreePointers","InlineCode",FontWeight -> "Plain"]," that takes a positive integer ",StyleBox[
+"n","InlineCode"]," as an input and outputs all possible ways to represent ",StyleBox[
+"n","InlineCode"]," as a sum of 2s and 3s. Return each way is ascending order and the list of possibilities in ",Cell[
+BoxData[
+TemplateBox[{"\"Sort\"","paclet:ref/Sort","paclet:ref/Sort","Link",{"HyperlinkActive"},BaseStyle -> {"InlineCode","Hyperlink"}},
+"HyperlinkTemplate"]],ExpressionUUID -> "53ca2473-be44-4089-b7c6-7abbd71fe6b0"]," order."}],
+"Text",ExpressionUUID -> "369cca89-d8e1-458e-8b90-0c532c414f45"],Cell[
+CellGroupData[
+{Cell[
+BoxData[ButtonBox[TagBox[TooltipBox[Cell[
+BoxData[RowBox[{StyleBox["TwoAndThreePointers",
+StripOnInput -> True,FontColor -> GrayLevel[0]],"[","5","]"}]],"Input",Editable -> False,
+Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,ExpressionUUID -> "daeeeb09-82b5-4a29-8c10-bced1e36bdde"],
+"\"Click to create an evaluatable copy of this cell\"",TooltipStyle -> "TextStyling"],
+Function[Annotation[Slot[1],"Click to create an evaluatable copy of this cell","Tooltip"]]],
+Appearance -> None,BaseStyle -> "Input",RuleDelayed[ButtonFunction,CellPrint[Cell[
+BoxData[
+RowBox[{"TwoAndThreePointers","[","5","]"}]],"Input"]]],Evaluator -> Automatic,Method -> "Preemptive"]],
+"Input",Editable -> False,Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,
+CellLabel -> " In[1] :=",CellID -> 70,ExpressionUUID -> "59918309-2425-4094-9cc0-0d2acdc41ccf"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{"2",",","3"}],"}"}],"}"}]],"Output",CellLabelAutoDelete -> False,
+FontSize -> 14,CellLabel -> " Out[1] =",ExpressionUUID -> "4d15114c-dc02-43dc-acbf-cbd61d0cf567"]},
+Open],ExpressionUUID -> "407aa0fd-2513-49d5-8a67-9bb9f72e0327"],Cell[
+CellGroupData[
+{Cell[
+BoxData[ButtonBox[TagBox[TooltipBox[Cell[
+BoxData[RowBox[{StyleBox["TwoAndThreePointers",
+StripOnInput -> True,FontColor -> GrayLevel[0]],"[","14","]"}]],"Input",Editable -> False,
+Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,ExpressionUUID -> "29c6d2e8-9db1-4a6a-96ef-4cc005f82bec"],
+"\"Click to create an evaluatable copy of this cell\"",TooltipStyle -> "TextStyling"],
+Function[Annotation[Slot[1],"Click to create an evaluatable copy of this cell","Tooltip"]]],
+Appearance -> None,BaseStyle -> "Input",RuleDelayed[ButtonFunction,CellPrint[Cell[
+BoxData[
+RowBox[{"TwoAndThreePointers","[","14","]"}]],"Input"]]],Evaluator -> Automatic,Method -> "Preemptive"]],
+"Input",Editable -> False,Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,
+CellLabel -> " In[2] :=",ExpressionUUID -> "e3d4f329-be3f-417f-99b5-a20c7fcf82c7"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"2",",","3",",","3",",","3",",","3"}],"}"}],",",RowBox[
+{"{",RowBox[{"2",",","2",",","2",",","2",",","3",",","3"}],"}"}],",",RowBox[{"{",RowBox[
+{"2",",","2",",","2",",","2",",","2",",","2",",","2"}],"}"}]}],"}"}]],"Output",CellLabelAutoDelete -> False,
+FontSize -> 14,CellLabel -> " Out[2] =",ExpressionUUID -> "a54ecce7-cdd4-4b12-a75d-f51cf32ae2d2"]},
+Open],ExpressionUUID -> "0b46dbd9-7266-41d2-9613-b7cb4fd36b3c"],Cell[
+"\<Verify each list sums to 14:\>",
+"Text",ExpressionUUID -> "17041c30-0393-452d-bfb7-3cd66c10cc8b"],Cell[
+CellGroupData[
+{Cell[
+BoxData[ButtonBox[TagBox[TooltipBox[Cell[
+BoxData[RowBox[{"Total","[",RowBox[
+{"%",",",RowBox[{"{","2","}"}]}],"]"}]],"Input",Editable -> False,Evaluatable -> False,
+CellLabelAutoDelete -> False,FontSize -> 14,ExpressionUUID -> "7ed69159-c524-4aeb-a139-8741de00a6c6"],
+"\"Click to create an evaluatable copy of this cell\"",TooltipStyle -> "TextStyling"],
+Function[Annotation[Slot[1],"Click to create an evaluatable copy of this cell","Tooltip"]]],
+Appearance -> None,BaseStyle -> "Input",RuleDelayed[ButtonFunction,CellPrint[Cell[
+BoxData[
+RowBox[{"Total","[",RowBox[{"%",",",RowBox[{"{","2","}"}]}],"]"}]],"Input"]]],Evaluator -> Automatic,
+Method -> "Preemptive"]],"Input",Editable -> False,Evaluatable -> False,CellLabelAutoDelete -> False,
+FontSize -> 14,CellLabel -> " In[3] :=",ExpressionUUID -> "b1c69a95-8f95-40b4-b98c-9fabf08eb050"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"14",",","14",",","14"}],"}"}]],"Output",CellLabelAutoDelete -> False,
+FontSize -> 14,CellLabel -> " Out[3] =",ExpressionUUID -> "69b54dc5-ebf7-45a3-9618-2240881d0124"]},
+Open],ExpressionUUID -> "28dce4fa-c6ed-4d9a-9566-3693a60f4245"]},Open],ExpressionUUID -> "0633067e-a144-45c7-9a4c-c3b21ad33cf2"],Cell[
+CellGroupData[
+{Cell[
+"\<More Examples\>","Subsection",ExpressionUUID -> "a0692d83-b062-4397-96b1-b45e0499a7eb"],Cell[
+CellGroupData[
+{Cell[
+BoxData[ButtonBox[TagBox[TooltipBox[Cell[
+BoxData[RowBox[{StyleBox["TwoAndThreePointers",
+StripOnInput -> True,FontColor -> GrayLevel[0]],"[","3","]"}]],"Input",Editable -> False,
+Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,ExpressionUUID -> "8b995112-caf8-44e0-8bfe-dcdaaf893a41"],
+"\"Click to create an evaluatable copy of this cell\"",TooltipStyle -> "TextStyling"],
+Function[Annotation[Slot[1],"Click to create an evaluatable copy of this cell","Tooltip"]]],
+Appearance -> None,BaseStyle -> "Input",RuleDelayed[ButtonFunction,CellPrint[Cell[
+BoxData[
+RowBox[{"TwoAndThreePointers","[","3","]"}]],"Input"]]],Evaluator -> Automatic,Method -> "Preemptive"]],
+"Input",Editable -> False,Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,
+CellLabel -> " In[4] :=",ExpressionUUID -> "1c40ce29-9280-4e6e-91e5-44feeaf070c6"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{","3","}"}],"}"}]],"Output",CellLabelAutoDelete -> False,FontSize -> 14,
+CellLabel -> " Out[4] =",ExpressionUUID -> "b80fe706-b089-4553-a1bf-d3f673d04ce9"]},
+Open],ExpressionUUID -> "f49e7343-5930-41a5-8bd4-dae4883b0f27"],Cell[
+CellGroupData[
+{Cell[
+BoxData[ButtonBox[TagBox[TooltipBox[Cell[
+BoxData[RowBox[{StyleBox["TwoAndThreePointers",
+StripOnInput -> True,FontColor -> GrayLevel[0]],"[","6","]"}]],"Input",Editable -> False,
+Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,ExpressionUUID -> "aa062e2b-98ac-4c70-8c3c-b27b649c0f59"],
+"\"Click to create an evaluatable copy of this cell\"",TooltipStyle -> "TextStyling"],
+Function[Annotation[Slot[1],"Click to create an evaluatable copy of this cell","Tooltip"]]],
+Appearance -> None,BaseStyle -> "Input",RuleDelayed[ButtonFunction,CellPrint[Cell[
+BoxData[
+RowBox[{"TwoAndThreePointers","[","6","]"}]],"Input"]]],Evaluator -> Automatic,Method -> "Preemptive"]],
+"Input",Editable -> False,Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,
+CellLabel -> " In[5] :=",ExpressionUUID -> "9a390ba5-ddca-495d-9373-ac8a8fde2415"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"3",",","3"}],"}"}],",",RowBox[{"{",RowBox[
+{"2",",","2",",","2"}],"}"}]}],"}"}]],"Output",CellLabelAutoDelete -> False,FontSize -> 14,
+CellLabel -> " Out[5] =",ExpressionUUID -> "19196653-6775-49cd-b21a-14119427fa07"]},
+Open],ExpressionUUID -> "087698fb-cb18-43a0-b7b2-cbb25604deb3"],Cell[
+CellGroupData[
+{Cell[
+BoxData[ButtonBox[TagBox[TooltipBox[Cell[
+BoxData[RowBox[{StyleBox["TwoAndThreePointers",
+StripOnInput -> True,FontColor -> GrayLevel[0]],"[","19","]"}]],"Input",Editable -> False,
+Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,ExpressionUUID -> "4ef2e083-e354-4d0b-a8cb-bce2d8f5ce39"],
+"\"Click to create an evaluatable copy of this cell\"",TooltipStyle -> "TextStyling"],
+Function[Annotation[Slot[1],"Click to create an evaluatable copy of this cell","Tooltip"]]],
+Appearance -> None,BaseStyle -> "Input",RuleDelayed[ButtonFunction,CellPrint[Cell[
+BoxData[
+RowBox[{"TwoAndThreePointers","[","19","]"}]],"Input"]]],Evaluator -> Automatic,Method -> "Preemptive"]],
+"Input",Editable -> False,Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,
+CellLabel -> " In[6] :=",ExpressionUUID -> "5ec3bfde-bf80-4b23-9554-b4f31d792f6f"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"2",",","2",",","3",",","3",",","3",",","3",",","3"}],"}"}],",",RowBox[
+{"{",RowBox[{"2",",","2",",","2",",","2",",","2",",","3",",","3",",","3"}],"}"}],",",RowBox[
+{"{",RowBox[{"2",",","2",",","2",",","2",",","2",",","2",",","2",",","2",",","3"}],"}"}]}],"}"}]],
+"Output",CellLabelAutoDelete -> False,FontSize -> 14,CellLabel -> " Out[6] =",ExpressionUUID -> "7fa0d424-8669-4537-9f22-e4e3ebfe89cb"]},
+Open],ExpressionUUID -> "08e21f6f-9089-4493-ac05-121e63dfb6cf"],Cell[
+CellGroupData[
+{Cell[
+BoxData[ButtonBox[TagBox[TooltipBox[Cell[
+BoxData[RowBox[{"Length","@",RowBox[
+{StyleBox["TwoAndThreePointers",StripOnInput -> True,FontColor -> GrayLevel[0]],"[","100","]"}]}]],
+"Input",Editable -> False,Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,
+ExpressionUUID -> "77479c61-4ce4-4229-9e90-197c22d6f3b0"],"\"Click to create an evaluatable copy of this cell\"",
+TooltipStyle -> "TextStyling"],Function[Annotation[Slot[1],"Click to create an evaluatable copy of this cell",
+"Tooltip"]]],Appearance -> None,BaseStyle -> "Input",RuleDelayed[ButtonFunction,CellPrint[
+Cell[
+BoxData[RowBox[{"Length","@",RowBox[{"TwoAndThreePointers","[","100","]"}]}]],
+"Input"]]],Evaluator -> Automatic,Method -> "Preemptive"]],"Input",Editable -> False,
+Evaluatable -> False,CellLabelAutoDelete -> False,FontSize -> 14,CellLabel -> " In[7] :=",
+ExpressionUUID -> "a78d5847-8078-4826-b989-5b0892c67061"],Cell[
+BoxData["17"],"Output",
+CellLabelAutoDelete -> False,FontSize -> 14,CellLabel -> " Out[7] =",ExpressionUUID -> "125e0528-233b-4732-9aa7-e24b8ff129a1"]},
+Open],ExpressionUUID -> "d6b43633-d02d-4e5b-b2d6-6d2ba4aa2a47"],Cell[
+BoxData[RowBox[
+{"Length","@",RowBox[{"TwoAndThreePointers","[","100","]"}]}]],"Input",ExpressionUUID -> "a57b95a9-da11-46c4-b698-21112d2d68d7"]},
+Open],ExpressionUUID -> "b4effc76-1f81-4163-8f17-086dbfc322f2"]},Open],ExpressionUUID -> "a2283538-920f-4649-87d7-41fea3728b1e"],Cell[
+BoxData[
+FrameBox[TagBox[GridBox[{{StyleBox["\"SCRATCH AREA\"",StripOnInput -> False,FontFamily -> "Source Sans Pro",
+FontSize -> 18,FontWeight -> Plain,FontColor -> GrayLevel[1]]}},AutoDelete -> False,
+GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}},GridBoxSpacings -> {"Columns" -> {{0}},"Rows" -> {{0}}}],
+"Grid"],Background -> GrayLevel[0.65],FrameMargins -> {{13,13},{2,5}},FrameStyle -> None,
+ImageMargins -> {{0,0},{-2,0}},StripOnInput -> False]],"WCIntroDivider",ExpressionUUID -> "1d33dd26-6cd0-46c6-a446-0a98ccb4fb0f"],Cell[
+BoxData[
+""],"WCIntroDividerLine",CellFrameColor -> GrayLevel[0.65],ExpressionUUID -> "5cee5772-627e-4eda-86d8-adec43e0cb7d"],Cell[
+BoxData[
+""],"Input",CellTags -> "NoLabel",ExpressionUUID -> "a574efae-4f53-4bd9-94fb-4d05dc3351bc"],Cell[
+BoxData[
+FrameBox[TagBox[GridBox[{{StyleBox["\"ENTER YOUR CODE HERE\"",StripOnInput -> False,
+FontFamily -> "Source Sans Pro",FontSize -> 18,FontWeight -> Plain,FontColor -> GrayLevel[
+1]]}},AutoDelete -> False,GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}},
+GridBoxSpacings -> {"Columns" -> {{0}},"Rows" -> {{0}}}],"Grid"],Background -> RGBColor[
+0.9961,0.3098,0.21569],FrameMargins -> {{13,13},{2,8}},FrameStyle -> None,ImageMargins -> {{0,0},{-2,0}},
+StripOnInput -> False]],"WCIntroDivider",ExpressionUUID -> "f5948bbe-c703-40d5-a38e-59d18f2868f4"],Cell[
+BoxData[
+""],"WCIntroDividerLine",ExpressionUUID -> "65cff21a-358c-424c-b5b3-4bf9a24845f5"],Cell[
+BoxData[
+{RowBox[{RowBox[{"TwoAndThreePointers","[","1","]"}]," ","="," ",RowBox[{"{","}"}]," "}],"\n",RowBox[
+{RowBox[{"TwoAndThreePointers","[","2","]"}]," ","="," ",RowBox[{"{",RowBox[{"{","2","}"}],"}"}]}],"\n",RowBox[
+{RowBox[{"TwoAndThreePointers","[","3","]"}]," ","="," ",RowBox[{"{",RowBox[{"{","3","}"}],"}"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"TwoAndThreePointers","[","n_Integer","]"}],"/;",RowBox[{"n",">","0"}]}],":=",RowBox[
+{"If","[",RowBox[{RowBox[{"n"," ",">"," ",RowBox[{"2","*",RowBox[{"IntegerPart","[",RowBox[
+{"n","/","2"}],"]"}]}]}],","," ",RowBox[{"Map","[",RowBox[{RowBox[{"Append","[","3","]"}],","," ",RowBox[
+{"TwoAndThreePointers","[",RowBox[{"n"," ","-"," ","3"}],"]"}]}],"]"}],",","\n","  ",RowBox[
+{"Append","[",RowBox[{RowBox[{"Map","[",RowBox[{RowBox[{"Append","[","3","]"}],","," ",RowBox[
+{"TwoAndThreePointers","[",RowBox[{"n"," ","-"," ","3"}],"]"}]}],"]"}],","," ","\n","  ",RowBox[
+{"ConstantArray","[",RowBox[{"2",","," ",RowBox[{"IntegerPart","[",RowBox[{"n","/","2"}],"]"}]}],"]"}]}],"]"}]}],"]"}]}]}],
+"Input",CellTags -> "NoLabel",ExpressionUUID -> "4a850986-b156-4e39-8bc2-4d2072d5a3d2"],Cell[
+BoxData[
+TemplateBox[{DynamicModuleBox[{Set[WolframChallenges`Notebooks`Authoring`Private`$inSubmit$$,
+False]},ButtonBox[DynamicBox[ToBoxes[If[TrueQ[WolframChallenges`Notebooks`Authoring`Private`$inSubmit$$],
+Framed[Panel[ProgressIndicator[Appearance -> "Percolate",ImageSize -> {60,20}],Background -> White,
+ImageSize -> {100,20},FrameMargins -> 0,Alignment -> Center,Appearance -> "Frameless"],
+Background -> GrayLevel[1],FrameStyle -> RGBColor[0.9961,0.3098,0.21569],RoundingRadius -> 3,
+Alignment -> Center],Mouseover[Framed[Panel[Style["Submit","ButtonLabel",ShowStringCharacters -> False],
+Background -> RGBColor[0.9961,0.3098,0.21569],ImageSize -> {100,20},FrameMargins -> 0,
+Alignment -> Center,Appearance -> "Frameless"],Background -> RGBColor[0.9961,0.3098,
+0.21569],FrameStyle -> RGBColor[0.9961,0.3098,0.21569],RoundingRadius -> 3,Alignment -> Center],
+Framed[Panel[Style["Submit","ButtonLabelActive",ShowStringCharacters -> False],Background -> GrayLevel[
+1],ImageSize -> {100,20},FrameMargins -> 0,Alignment -> Center,Appearance -> "Frameless"],
+Background -> GrayLevel[1],FrameStyle -> RGBColor[0.9961,0.3098,0.21569],RoundingRadius -> 3,
+Alignment -> Center]]],StandardForm]],RuleDelayed[ButtonFunction,Function[CompoundExpression[
+Set[WolframChallenges`Notebooks`Authoring`Private`$inSubmit$$,True],CompoundExpression[
+Off[MessageName[$CharacterEncoding,"utf8"]],Function[CompoundExpression[If[Not[TrueQ[
+WolframChallenges`$NotebookInitializedQ[Hash[{$SessionID,Last[EvaluationNotebook[]]}]]]],
+CloudGet[FileNameJoin[{CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols"],"InitializeNotebook"}]][]],
+If[Not[ValueQ[WolframChallenges`Notebooks`Dialogs`RunWithSubmissionPolicy]],Set[WolframChallenges`Notebooks`Dialogs`RunWithSubmissionPolicy,
+CloudGet[FileNameJoin[{CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols"],"RunWithSubmissionPolicy"}]]]],
+WolframChallenges`Notebooks`Dialogs`RunWithSubmissionPolicy[CompoundExpression[If[
+Or[GreaterEqual[$VersionNumber,11.1],ChoiceDialog[StringJoin["Wolfram Challenges is designed for version ",
+ToString[11.1]," or later of the Wolfram System, and may not function properly with the older ",
+"kernel you are using. Contact Wolfram Research (www.wolfram.com) for upgrade information."]]],
+If[Not[StringQ[If[Not[$CloudConnected],CloudConnect[],$WolframID]]],MessageDialog[
+"Users must authenticate with the cloud in order to submit solutions."],CompoundExpression[
+Set[WolframChallenges`$SubmissionTesting,False],Quiet[Quiet[CompoundExpression[If[
+TrueQ[WolframChallenges`Common`$ActiveClearing],Quiet[Unset[Once[CompoundExpression[
+"public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/HandleResponse"]]],
+"KernelSession"]]]],Catch[Module[{CodeEquivalence`Utilities`Private`result$},CompoundExpression[
+Check[Set[CodeEquivalence`Utilities`Private`result$,CodeEquivalence`Utilities`Private`once[
+CompoundExpression["public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/HandleResponse"]]],
+"KernelSession"]],CompoundExpression[Quiet[Unset[CodeEquivalence`Utilities`Private`once[
+CompoundExpression["public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/HandleResponse"]]],
+"KernelSession"]]],Throw[CodeEquivalence`Utilities`Private`result$,CodeEquivalence`Utilities`OnceUnlessFailed]]],
+If[FailureQ[CodeEquivalence`Utilities`Private`result$],CompoundExpression[Quiet[Unset[
+CodeEquivalence`Utilities`Private`once[CompoundExpression["public-2.17.205",CloudGet[
+CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/HandleResponse"]]],
+"KernelSession"]]],Function[Message["Evaluating `1` resulted in the failure `2`.",
+Short[HoldForm[CompoundExpression["public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/HandleResponse"]]]]],
+Short[HoldForm[Slot[1]]]]][CodeEquivalence`Utilities`Private`result$]]],CodeEquivalence`Utilities`Private`result$]],
+CodeEquivalence`Utilities`OnceUnlessFailed]],MessageName[CloudObject,"invuri"]],MessageName[
+$CharacterEncoding,"utf8"]][Quiet[Quiet[CompoundExpression[If[TrueQ[WolframChallenges`Common`$ActiveClearing],
+Quiet[Unset[Once[CompoundExpression["public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/CheckAnswer"]]],
+"KernelSession"]]]],Catch[Module[{CodeEquivalence`Utilities`Private`result$},CompoundExpression[
+Check[Set[CodeEquivalence`Utilities`Private`result$,CodeEquivalence`Utilities`Private`once[
+CompoundExpression["public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/CheckAnswer"]]],
+"KernelSession"]],CompoundExpression[Quiet[Unset[CodeEquivalence`Utilities`Private`once[
+CompoundExpression["public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/CheckAnswer"]]],
+"KernelSession"]]],Throw[CodeEquivalence`Utilities`Private`result$,CodeEquivalence`Utilities`OnceUnlessFailed]]],
+If[FailureQ[CodeEquivalence`Utilities`Private`result$],CompoundExpression[Quiet[Unset[
+CodeEquivalence`Utilities`Private`once[CompoundExpression["public-2.17.205",CloudGet[
+CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/CheckAnswer"]]],
+"KernelSession"]]],Function[Message["Evaluating `1` resulted in the failure `2`.",
+Short[HoldForm[CompoundExpression["public-2.17.205",CloudGet[CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/symbols/CheckAnswer"]]]]],
+Short[HoldForm[Slot[1]]]]][CodeEquivalence`Utilities`Private`result$]]],CodeEquivalence`Utilities`Private`result$]],
+CodeEquivalence`Utilities`OnceUnlessFailed]],MessageName[CloudObject,"invuri"]],MessageName[
+$CharacterEncoding,"utf8"]][CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/api/check"],
+{"TwoAndThreePointers"},"public/pub/p-0c2a48aa3b1f7164"]]]]],Null]]]][]],Set[WolframChallenges`Notebooks`Authoring`Private`$inSubmit$$,
+False],Null]][]],Appearance -> None,Method -> "Queued",Evaluator -> Automatic],RuleDelayed[
+Initialization,{Set[WolframChallenges`Notebooks`Authoring`Private`$inSubmit$$,False]}],
+RuleDelayed[DynamicModuleValues,{}],ExpressionUUID -> "da9d6f23-bbac-4221-86aa-8f1d1b1e9e26"],TemplateBox[
+{10},"Spacer1"],DynamicBox[ToBoxes[Refresh[CompoundExpression[Off[MessageName[$CharacterEncoding,
+"utf8"]],If[Not[TrueQ[$CloudConnected]],Column[{Row[{Text[Style["Note: ","SigninText",
+FontWeight -> "DemiBold",Background -> None]],Text[Button[PaneSelector[{False -> "Sign into the Wolfram Cloud",True -> "Sign into the Wolfram Cloud"},
+Dynamic[CurrentValue["MouseOver"],ImageSizeCache -> {48.,{1.,12.}}],BaseStyle -> {"SigninText",RGBColor[
+"#36b1bf"]},FrameMargins -> 0,ImageSize -> Automatic],CloudConnect[],Appearance -> None,
+Evaluator -> Automatic,Method -> "Queued"]],Text[Style[" to save your work on ","SigninText",
+Background -> None]]}],Text[Style["Challenges and keep track of progress.","SigninText",
+Background -> None]]},Alignment -> Left,Spacings -> 0],Invisible[""]]],UpdateInterval -> 1],
+StandardForm]]},"RowDefault"]],"SubmitRow",ExpressionUUID -> "86c96951-27ff-4646-b225-26c87d83f172"]},
+WindowSize -> {Automatic,Automatic},WindowMargins -> {{Automatic,Automatic},{Automatic,Automatic}},
+DockedCells -> {Cell[
+BoxData[TagBox[GridBox[{{ButtonBox[TagBox[GridBox[{{GraphicsBox[
+TagBox[RasterBox[CompressedData["\n1:eJzVmguUlVUVx4eXTDAoMSKGyEMFEc0oKRCmDBIMTSpEKkFGRh6ZNBCgaJGD\n+QDKB1SKBoQouVKyJDGNkcBkWUG+SgXJ1JKsMAvIMJ+7/evsb90z557vfneu\nF1zutf4z3+Ocs/c+j/36bq+66aOntKyoqJhVqX9GT5wzdObMiRef0VFvzqyf\ndd7U+smTRtbPnjx18sxBda304WBFjaJ1RflJRFopOpZhnPcyVjlk2lek8p2h\n+Ktiod13U6xQ/EIxFx0ifToqvmptbqKPPZ+v+Jti7P7WI41Ulh6KIXbdRfFf\ncVRruv5ZcsS7oZExhnr9oOetb63dv6o4zNqeCM/9rafxPkXxsmKV3Y/2ZJ6J\njIovKtYo7lAMLDDWR6zNT60P+n7FG2+MtVup+I9ixP7S05PxKZPldruvUbzm\nybinlLWwedrjjfO6t4dus2fbyq1PRI4DFX29+7eM96N21sazhuLO66q3swba\nd7jiFhtrkGKc8XjEeMK7pbU9RnFQOXT0+LO/nlHc4z3zzya0U8zW7APefw94\n7fDer1U8W07eOtZ644NdaWPPBit+otiqWK3oVS5+Ef49jceTxnOwPW+peMVk\n21gmXp2Cue1jz9s0c5wDFMcpRtnen6Q4U/FRxSHNHCuZ8+6BbJ2bM07K2IcH\nYz6t2Kt4U7E4o++hiumKDbYOu8SdwUbDJsVz4s7jHxRLFCcpWhQYc6Hx3mt9\nfOpZoo7DFP3tuoXiT5JPbyhqUvofJS52QKZ7FecqjijAr71ihOLb4s7qE4qz\nxWxS0Haw8Q7p+WSe9P/xipFF6nq4rcN2RaU9O9fmNKHdyBPp21oxT5xfvlHs\nTJv+08TZ7V8r/mh4XHG34grFyYo24vZ9nc3xrxTHRfiMNxkTQrZae9fWZP+3\nonsR+i7zxpnhPT9S8Vlx569TpF9Xk+9hxQfE2ZIxige98fDZN0fWJiHWlv1K\nrPYexZU2d+dE+HUyWYhzjvSef9kbb3kR+m7z2nNWK8XFdthF9ma/SB984HM2\nV8zv8aa7T0mcOKCAvgmxdpx7zhK++F+KSyJ8+5pMd5qMyLrdG2d7EfpuDXi/\n5F0Ty3YK2nczXa60+4mS8xEJESMRi4y0uXkmeL8mRe97FAeJs+v494sia/xq\niqxQZhymba5P4Q3dGrRlLR9SLLH7i1P6sS8/JG4eLlJ8y3v3PXFn9q1IP+gx\nRWfFh8Xt7VMDGVYWkPf6IvTtIe6sh8Qadg3aXiNu3yLvlBSeLyg6KLbYPT5o\noF0vEmejmLd/FJAbG8dexWa/KJ6f1ev3mWwhoUPPFB05Jy29+0+Jyz0hbPEK\nxg36cEaZb87QB6XpvvJphuJ07x5bij063/Tk7PUTZ68L0Q3GlxxqWSALfv77\n4s65mOyjvPfYzhbe/ScUmxW9gzmosuv2kTn6seJqcfWMh1JkJM+pEudzfKoV\n53Mb7f79kssF0oj9Tq6MnyCuPSqQp739rwp0O9p0O9l7douNyXkf4Ok7S5yd\nWBOMjT99xeb1rAIy4oOxZ2F8wFyd5t0j0wMZ+kIPGn982pJAJvYJZ2K25OKO\nExT/tL4rvbaPemOiXx9p6ofXBWNfqlht1w+nyMa+xUbNi7zjHHTz7rsXqS9E\nbYBcG5/V1pPpXq/NCnFrstN7tsVr+8tgzL3B/c2Bvuj4OcWxBeSiXoWdejHl\nPf2pW+GrDpHi9V0gbu9hB4d7Mt2UocMmr21DBo8JXlvyftYOHzErpT3zh81u\nTHkPUZc5VfExRTspXt9tJgex6TxPrvEZ/S7z2lL7DPP3hNjrbby21Mz+Yte3\nRtqzXsQHFxQhO/WfswIbUgwdrJijuM2TC7+2OaU9cWKT2qi4M/tk0O4+RZeg\nHfswsRu/jYy92OTZXaTs2F3iFHKNJUX2wX9T+90cyEYs9vOgLfFiH69NB+8a\nH/ElcfaI+uMECXJxcXHF3XYd5p/YB+rJlxUh88vBPetLTHFO5F1InxSXP24N\nZOtsMo8wHfDxVb6u4vYAc9I/6Jf41HERfdfa9VPSlPAF5DWJjWJuN0bkxX8e\naJgqufoUdrCPIW1vQuQQp0T0TXwj+XMX73l/cfYbnZK55Cxhf4gf1ntjXxrZ\nz5vs+jdeO74rYHeoJbJHLxHnn2Ox6WvW9+vi7NVS7x3tyTk4j5eLswchkWN9\nnjEC2Xzfh/3jjMyQXJ14b0Sex4P7BcGY1Ed32PUqr129PWMedyjGils/fM13\nIjJnEfX3rqbbY8E78iLyjh8Gsl2RoQs+YV0G3/HBmOjwhumRfAPg3LKPD5Om\nsRR2iDPzuyzlUoi1qBfn2xrExehPmxzUK+cFso3LGA9d0+pBED6qXUVA4uwy\nZ6WvtZtrzy/0+hL/s5++21wlA8LX/7+mLq7OTI2L+J/zMyyQi/MUq7VBnLEa\na1cr+fEIOQbxJ/WRg4NxGyRns4gpqu3atzH4X+Ig/MZgGwvf/WlxdvMbiuXi\n6uWPmPx+jSwhfCf2c7Xd44vIG4iLD/BkqjZZiWFfCMbAPk4KdCCGvUHc2l0n\nzod+wdqvDdr2EvtuJ1bvEBcP+zk7372oX00x3dGPWJBzRx5L7bkqGJf9kJzZ\n060vueJsG/N+a/cDZAz6JjWScSb7daYLeUDviiJIXJ6d0IjgHfN9o3d/fmRt\nsmiB9eX7AXWAu8TlVA2K88TFiNRG3jSwT8ilmuSD4urHCTWJQVL0amvzTZ5P\nDoBPIvbwfcGKoA/tyAmPtfssuxcj/ERf6w//tJoOtMja/Uws9/dk8XM5bFGV\n6dDPdGLsSq89+8g/v9QJwjhhY2SeqJ2yZ7Cfid9tLt3njZcWl603HnyDwa5U\nB3KsD9rfL7laB8S6tA76/ChDriY1FOuDDOz55XZPvFKKzmOtP/YtrFUSc2Gb\n8fusyfCIHEulMN0Z6UPMlVaDgk4SZ2vDecJOYUOvtXtsUSymKkTEJ0ntCN2e\nsOfojr+nNkmMekHAm31JXDOkwNicmQGhvtYfffZE+mAPa+yavdMh6HeEOH+b\nxPz45Q3N1HmhNx61iTq7HmkyXRjwbCe5fcw3xlWRMZn3MTFdvXGoHfKtBxtw\nuzj/zth+PntHSj/y/N9LrgZGjYqcspg9zjoc7Y2HzbnKdB0X4bfa6zvHZFxs\nMi8zHQ4tpGvGPMwP5MvbI+Js4lybV+rgve05fnqyOP+OHaSGwHcPcgbiZHKL\nGuuP3PhuYgZ8VN8InxMDWeaXqlcwLnPcQ9x+vTrgMadAP2IXbAh2kd9V4Zvx\nm3nfN609OfNpNh8v2XyQh0W/A9uc+rTIZETWqlifDD2pn2fVv8mnyRGIJyfE\ndBGXU0yzNuQm2Fdyhwfs2RbJxX7kysTaQ0I9xcXL8FhnPGM1T5+wd3nfUQvo\n21ryv5uFxLfRj3v37L3qAmOSz7LGrCO5a624eHNQRr9qaVrLI3b+TIZs7I/o\nXirAh7g7Zqsh1gTfOyx4js5l+1mmuPMc1i2HG+8wJ0gImU8okR8xI/l7Ele+\nbjqNtvfE5WFOU1dGfc8OxsbOd7Z3o0wWXzZkLXofF+CLT+Us5v1eVZrmFNC6\n2Bgl8g1rjVsibVqZbJWxMcokB3Up4uVrJT+/3lVGPruCseGFLSZvKtm3NoM/\ndQa+R6bVQxLKq4mUwKsygwcykD8eUw7dUmTgzBQTK5GzYrubvcfE+Qby3MuL\n4IMseflDOUlc/SwtryCm58wlNV58Lt9+qeF3LTAm548aLDlasoeJVfDROyVO\nyDB9X+rqyUcsg8+/y2QiduS7QJLj4GvxVcRkz5p82HHi62n2HhtA3LVBcueD\n+iB1GGrpyW+/iPFqjUej8YR36u/X3kkSl9MONN0bxH0DbZScH8OPEufnxVXv\nVhIX31OLTPJi4kq+LX5TXB63Qgr8/v3dQOLq7Jxbv8bP9yZ+68/3AfIgcia/\nhkstY4qUEPO/UyQuVyfuT76HkteutvOclu9QWyE3SuzcbjvHbztW2tckLo9g\nvxIbfE2C3zFl9CUv5BtN8pvApftS1nKRuPpuybZHXP6X+dvWUuh/YTQHOQ==\n\n                "],
+{{0,58},{60,0}},{0,255},ColorFunction -> RGBColor],BoxForm`ImageTag["Byte",ColorSpace -> "RGB",
+Interleaving -> True],Selectable -> False],BoxID -> "{\"type\":\"Image\",\"message\":\"SizeLimitReached\",\"imageData\":{\"imageSource\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAYAAAC9pNwMAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAABL5JREFUSIm1l2mIllUUx393Rs1sUUizKNFSTPODhbbYouRMtmglWGhZQYltQmL0oUUliEpbRLRMKwk0W6XUD1k2ViSCGmkoWplLWDqU0zK5TGYzvz7c8+LTOONMUAdenvvcc885/3vP/57zvNAKUTur96vt1DvUfgVdT3Wc2l69Rz2jNT7btBBwDPATMBw4D9gDTAKmAZtjWV9gIlAGDAWGqM8AA1NKL7UGRDHgyfE8oD6r3quuU0cfw+bKWDNJnarWxXyn1gYdoFarSV2kblev+RegL1W3qkvi/Xu1ovG6po76WuA04GlgQ0ppbMFpW+A64AogFXxsBN5OKdWklFYDvdX71OnAmcAYYGUxSCo4HUnOUy3wEVAPTCjlSZ0A9Azd8TFuC+wCqoFBwCnA1JTSPvUmYFEAK3Gl91F5j+P5Vj1dnaz2jPkO6jz1GnWG+pu6XH3DI/KnulQdor6qnhO23dTH1B7qBvX7pnKzqeCkWm0TeZ6rDla3hP67uDaT432W2hDjWnWUOl/tqparO9XDod/eVOCr1Tp1l1oZc+PVa9WvCrubpP6uzlSnqJXqrwX9frVCfSV8XKRuUw+pt5TilakD1VXAGqAP8EJKqUptDwyM3PWJ9T8Ah4GTgMsAgduCFyU5AZgOrFIvTimtBeYC/YFl6gq1AnV0IF2v7lG3BtLh6sjYXUkeUL+J8V+x+3nmK9dYKtU54WuDWqN+FrqJZcBq4CBwPnA68GEgHwDsj90BfAJ0BXrHezlwN/B82DeWYcCfMX6HzPjLgTrgfcwkukBdEnk7MVBOU28NhIfUEQWSlOSwuttMqLWNdO+oT4av9upz6jIz88vLgO3kGvs4cGfslMifMX4DGAy8BNTEXD1wb8wtABYDTwANoW/gSJ3oE2tnAf2AHUReS2xUHRwoH1WHxm57ma/Yk+rNTeSzJFWh36w+pc4OX/1DfzCeNWXkzlIfbPwU2BsoPwc6A/OBXuQyuiXGM4CFsX5b5A2gArgIWA98XDixfcBScsVrAKakQNQLOBc4BLxFJtBv5GtwF5lAdwMryGXyBOBAgJsKjCMTrCGOchDwOvmKfgd8GxusBXallDahlgWx5qjvxlGMC0Bjg1QfNnO0DeZ2OL4w94t6ufpi+BgR85+qsyNWOaEs1l3V683lMpnrc4W6ppngX5tL4wvqXvUq9TWjD8d7UaooidoxAqyL50J1cejamT8GbjYXkB+bCP5IrBsctt3C9mX1A3Oj+DzAdaZA9xKAMqAT+cIPBQaklNaH7kbganIhqQa6RL5/AtqFbjcwM6VUp/YNMn5BLia1KaX6UqxiP+4A7AROLWAZTr6bD6aUVqptgEuAiwNgAv4gfwisTCn9rl4YZHyIfzb/GqBHSukAjSWIUm0mTZV6Soz3qd2PMjjavqu5Xzeop5krVb25To9qyTipbeM3JICoPtyKwLfH2p/NTeI4o6+3ZFtycEYwtCjL1FOPYdMxyFSUX5s7qWaRxNFMAk4mf2d9SSbQWeSKNZ9cMG4jV6y9wHLgbDI36oA5KaWFrdptSxK5e9PcY1er76k9/hPnzQTsry5Qd5g/ebqrXcx/bTaai9Cg/yNwpXqD2q4JXbk6TB3fWn9/A9izhAbbZ9AzAAAAAElFTkSuQmCC\",\"boundingBox\":{\"width\":30,\"height\":29,\"baseline\":19}},\"plotRange\":[0,1,0,1]}",
+DefaultBaseStyle -> "ImageGraphics",ImageSize -> Magnification[0.5],ImageSizeRaw -> {60,58},
+PlotRange -> {{0,60},{0,58}}],StyleBox["\"WOLFRAM CHALLENGES\"",ShowStringCharacters -> False,
+FontFamily -> "Source Sans Pro",FontSize -> 16,FontWeight -> "Normal",FontColor -> GrayLevel[
+1]]}},AutoDelete -> False,GridBoxAlignment -> {"Columns" -> {Left,Left},"Rows" -> {Center,Center}},
+GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}}],"Grid"],
+Appearance -> None,RuleDelayed[ButtonFunction,SystemOpen["http://challenges.wolfram.com/"]],
+Evaluator -> Automatic,Method -> "Preemptive"]}},AutoDelete -> False,GridBoxDividers -> {"Columns" -> {{None}},"Rows" -> {{None}}},
+GridBoxItemSize -> {"Columns" -> {{Automatic}},"Rows" -> {{Automatic}}}],"Grid"]],
+"Text",ShowCellBracket -> False,CellMargins -> 0,GeneratedCell -> True,CellAutoOverwrite -> True,
+CellFrameMargins -> {{60,0},{4,6}},CellFrameColor -> RGBColor[0.9961,0.3098,0.21569],
+ShowStringCharacters -> False,Background -> RGBColor[0.9961,0.3098,0.21569]],Cell[
+
+"\<\>","Text",CellMargins -> 0,ShowCellBracket -> False,CellElementSpacings -> {"CellMinHeight" -> 5},
+CellFrameMargins -> 3,FontSize -> 1,CellFrame -> 0,Background -> RGBColor[0.9686274509803922,
+0.9137254901960784,0.403921568627451]]},TaggingRules -> {"WolframChallengesInternal" -> Association[
+"PacletVersion" -> "2.17.205","FrameworkVersion" -> "public-2.17.205","PacletBuildDate" -> DateObject[
+{2018,4,12,2,0,29.8383958`9.227350380539981},"Instant","Gregorian",0.],"NotebookBuildDate" -> DateObject[
+{2018,4,12,3,29,13.80172`7.892508198099561},"Instant","Gregorian",0.],"Hash" -> "0c2a48aa3b1f7164",
+"Key" -> "public/pub/p-0c2a48aa3b1f7164","CheckerAPI" -> CloudObject["https://www.wolframcloud.com/objects/wolframchallenges/public/api/check"],
+"SearchNames" -> {"TwoAndThreePointers"},"Status" -> "Published","Source" -> CloudObject[
+"https://www.wolframcloud.com/objects/wolframchallenges/public/pub/p-0c2a48aa3b1f7164"],
+"ReviewNotebook" -> False]},ShowAutoSpellCheck -> False,StyleDefinitions -> Notebook[
+{Cell[
+StyleData[StyleDefinitions -> "Default.nb"]],Cell[
+StyleData["Title"],ShowCellBracket -> False,
+ShowGroupOpener -> False,CellMargins -> {{65.14453125,30},{0.,30.}},CellFrameMargins -> {{66,Inherited},{Inherited,20}},
+FontFamily -> "Source Sans Pro Light",FontSize -> 50,FontColor -> RGBColor[0.1843137254901961,
+0.6509803921568628,0.6941176470588235]],Cell[
+StyleData["Section"],CellFrame -> {{0,0},{0,1}},
+ShowCellBracket -> False,ShowGroupOpener -> False,CellMargins -> {{66,30},{Inherited,35}},
+Deployed -> True,CellFrameMargins -> {{0,Inherited},{Inherited,10}},CellFrameColor -> GrayLevel[
+0.7137],FontFamily -> "Source Sans Pro",FontSize -> 17,FontWeight -> "DemiBold",FontColor -> Hue[
+0.51,0.817,0.72]],Cell[
+StyleData["SectionNoLine",StyleDefinitions -> StyleData["Section"]],
+CellFrame -> {{0,0},{0,0}},CellMargins -> {{49,30},{4,0}}],Cell[
+StyleData["SectionOnlyLine",
+StyleDefinitions -> StyleData["Section"]],CellMargins -> {{66,30},{4,35}},CellElementSpacings -> {"CellMinHeight" -> 1},
+CellFrameMargins -> 0,FontSize -> 0.1],Cell[
+StyleData["Subsection",StyleDefinitions -> StyleData[
+"Section"]],ShowCellBracket -> True,ShowGroupOpener -> True,WholeCellGroupOpener -> True],Cell[
+StyleData[
+"Text"],ShowCellBracket -> True,CellMargins -> {{66,30},{Inherited,Inherited}},FontFamily -> "Source Sans Pro",
+FontSize -> 16,FontWeight -> "Regular",FontSlant -> "Plain",PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"},
+FontColor -> RGBColor[0.3254901960784314,0.3254901960784314,0.3254901960784314]],Cell[
+StyleData[
+"Item"],CellDingbat -> StyleBox["\[FilledSmallSquare]",Alignment -> Baseline,RGBColor[
+0.21176470588235294`,0.6941176470588235,0.7490196078431373]],CellMargins -> {{81,30},{Inherited,Inherited}},
+FontFamily -> "Source Sans Pro",FontSize -> 16,FontWeight -> "Regular",FontSlant -> "Plain",
+PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"},FontColor -> RGBColor[
+0.3254901960784314,0.3254901960784314,0.3254901960784314]],Cell[
+StyleData["Description"],
+ShowCellBracket -> False,CellMargins -> {{71,30},{0,10}},AutoStyleOptions -> {"LocalVariableStyle" -> {FontColor -> RGBColor[
+0.263,0.537,0.345]}},LineSpacing -> {1.2,0},FontFamily -> "Source Sans Pro",FontSize -> 20,
+FontSlant -> "Plain",PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"},
+FontColor -> GrayLevel[0.3]],Cell[
+StyleData["WCIntroDivider"],Editable -> False,
+Selectable -> False,Deletable -> False,ShowCellBracket -> False,CellMargins -> {{66,30},{-2,35}},
+ShowStringCharacters -> False],Cell[
+StyleData["WCIntroDividerLine",StyleDefinitions -> StyleData[
+"Text"]],Editable -> False,Selectable -> False,Deletable -> False,CellFrame -> {{0,0},{0,8}},
+ShowCellBracket -> False,CellMargins -> {{66,30},{15,0}},CellElementSpacings -> {"CellMinHeight" -> 1},
+CellFrameMargins -> {{0,0},{-1,0}},CellFrameColor -> RGBColor[0.9961,0.3098,0.21569],
+FontSize -> 1],Cell[
+StyleData["SubmitRow"],Editable -> False,Selectable -> False,
+Deletable -> False,CellFrame -> {{0,0},{0,2}},ShowCellBracket -> False,CellMargins -> {{66,30},{15,30}},
+CellGroupingRules -> {"SectionGrouping",-5},CellFrameMargins -> {{Inherited,Inherited},{20,20}},
+CellFrameColor -> RGBColor[0.996078431372549,0.3058823529411765,0.21568627450980393`]],Cell[
+StyleData[
+"StandardForm"],FontSize -> 16],Cell[
+StyleData["CodeFont"],FontSize -> FEPrivate`If[
+False,Times[0.907029,Inherited],Inherited]],Cell[
+StyleData["RefLink"],TemplateBoxOptions -> {RuleDelayed[
+DisplayFunction,Function[TagBox[ButtonBox[Slot[1],ButtonData -> Slot[2],BaseStyle -> Dynamic[
+If[CurrentValue["MouseOver"],{"Link",FontColor -> RGBColor[0.854902,0.396078,0.145098]},
+{"Link"}]]],MouseAppearanceTag["LinkHand"]]]]},ButtonBoxOptions -> {BaseStyle -> "Link"}],Cell[
+StyleData[
+"InlineCode",StyleDefinitions -> StyleData["StandardForm"]]],Cell[
+StyleData["SmallText",
+StyleDefinitions -> StyleData["Text"]],FontSize -> Times[0.975,Inherited],FontColor -> GrayLevel[
+0.25]],Cell[
+StyleData["Hyperlink"],FontColor -> RGBColor[0.21176470588235294`,0.7058823529411765,
+0.7490196078431373]],Cell[
+StyleData["HyperlinkActive"],FontColor -> RGBColor[0.996078431372549,
+0.3058823529411765,0.21568627450980393`]],Cell[
+StyleData["SubmitButton"],ShowCellBracket -> False,
+CellMargins -> {{66,Inherited},{25,Inherited}},ShowCellLabel -> False,TextAlignment -> Center,
+ShowStringCharacters -> False],Cell[
+StyleData["SigninText",StyleDefinitions -> StyleData[
+"Text"]],ShowStringCharacters -> False,FontSize -> 12,FontColor -> GrayLevel[0.25]],Cell[
+StyleData[
+"ButtonLabel",StyleDefinitions -> StyleData["Text"]],TextAlignment -> Center,ShowStringCharacters -> False,
+FontFamily -> "Source Sans Pro",FontSize -> 18,FontWeight -> "DemiBold",FontColor -> GrayLevel[
+1]],Cell[
+StyleData["ButtonLabelActive",StyleDefinitions -> StyleData["ButtonLabel"]],
+TextAlignment -> Center,ShowStringCharacters -> False,FontColor -> RGBColor[0.996078431372549,
+0.3058823529411765,0.21568627450980393`]],Cell[
+StyleData["Notebook"],ShowAutoSpellCheck -> False]},
+Visible -> False,FrontEndVersion -> "11.3 for Linux x86 (64-bit) (February 20, 2018)",
+StyleDefinitions -> "PrivateStylesheetFormatting.nb"],FrontEndVersion -> "12. for Wolfram Cloud 1.53.0.1 (November 5, 2019)"]
